@@ -1,0 +1,150 @@
+@import "_mixin";
+@import "_reset";
+
+
+// // .btn{background-color: red;}
+// // .btn2{@extend .btn;}
+// 이 문법은 .btn, ,btn2{background-color: red;}와 같다.
+
+// $icons :(ic-1,ic-2,ic-3);
+// nth($icons,1)
+// 문자보관 => #{변수명}
+
+// #{nth($icons,2)}
+
+// &:nth-last-of-type(1) figure > p{background: white; url('./img/#{nth($icons,1)}.png') center no-repeat}
+// &:nth-last-of-type(2) figure > p{background: white; url('./img/#{nth($icons,2)}.png') center no-repeat}
+// &:nth-last-of-type(3) figure > p{background: white; url('./img/#{nth($icons,3)}.png') center no-repeat}
+// @each $number, $name in $icons{}
+// &:nth-last-of-type(#{number}) figure > p{background: white; url('./img/#{$name}.png') center no-repeat}
+
+
+a{text-decoration: none;
+  color: inherit;}
+body, figure{margin: 0;}
+
+
+
+main{
+    >figure{
+        max-width: 1920px;
+        position: relative;
+        margin: 0 auto;
+        >figcaption{
+            text-transform: uppercase;
+            position: absolute;
+            top:36%; left:38%;
+            z-index: 1;
+            display: block;
+            color: white;
+            font-size: 70px;
+            font-style: italic;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 800;
+            &:after{
+            content: '';
+            border: 1px solid black;
+            width: 40%;
+            margin-top: 8px;
+        }
+        }
+        
+    }
+    .fig{
+        width: 1470px;
+        @include flex(space-between);
+        margin: 0 auto;
+        figure{
+            display: flex;
+            flex-direction: column;
+            >p{
+            width: 20%;
+            }
+            >figcaption{
+                text-align: center
+            }
+        }
+    }
+    .back{ 
+        margin: 0 auto;
+        width: 1920px;
+        margin-top: 213px;
+        margin-bottom: 250px;
+        height: 790px;
+        background: url(./img/img-5.jpg) 0 0/cover no-repeat;
+        display: flex;
+        align-items: center;
+    }
+    .bot{
+        width: 1470px;
+        @include flex(flex-end);
+        margin: 0 auto;
+       
+        .bot-div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            >div{
+                >p:nth-of-type(1){
+                    font-size: 25px; font-weight: 600;
+                    span{color: red;}
+                }
+            }
+            >.fig-2{
+                margin-top: 65px;
+                display: flex;
+                justify-content: space-between;
+                >figure{
+                    width: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    
+                    div{
+                        width: 171px;
+                        height: 171px;
+                        border: 1px solid #7a7a7a;
+                        border-radius: 50%;
+                        background-color: white;
+                        @include flex;
+                        box-shadow: 5px 5px 5px;
+                    }
+                    figcaption{
+                        p:nth-of-type(1){
+                            font-weight: bold;
+                        }
+                        p:nth-of-type(2){
+                            white-space:pre-line;
+                        }
+                        text-align: center;
+                        
+                    }
+                    
+                }
+            }
+        }
+
+    }
+    
+
+}
+
+@import "_m-self"
+// 한번에 두개 가능
+
+// 1.해상도 스타일(디바이스별 사이즈, mixin, media) => _media.scss
+// 2. 각 페이지별 반응형 스타일 => _m-self.scss

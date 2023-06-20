@@ -1,0 +1,168 @@
+@media (min-width:1280px) {
+  body {
+    background-color: rgb(109, 51, 163);
+  }
+}
+@media (max-width:767px) {
+  body {
+    background-color: rgb(61, 185, 45);
+  }
+}
+@media (max-width:480px) {
+  body {
+    background-color: red;
+  }
+}
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header > div {
+  max-width: 1470px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+header > div nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+}
+header > div nav:nth-of-type(2) {
+  font-weight: bold;
+}
+header > div h1 {
+  width: 20%;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body, figure {
+  margin: 0;
+}
+
+main > figure {
+  max-width: 1920px;
+  position: relative;
+  margin: 0 auto;
+}
+main > figure > figcaption {
+  text-transform: uppercase;
+  position: absolute;
+  top: 36%;
+  left: 38%;
+  z-index: 1;
+  display: block;
+  color: white;
+  font-size: 70px;
+  font-style: italic;
+}
+main .menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+main .menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+main .menu a:after {
+  content: "";
+  border: 1px solid black;
+  width: 40%;
+  margin-top: 8px;
+}
+main .fig {
+  width: 1470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+main .fig figure {
+  display: flex;
+  flex-direction: column;
+}
+main .fig figure > p {
+  width: 20%;
+}
+main .fig figure > figcaption {
+  text-align: center;
+}
+main .back {
+  margin: 0 auto;
+  width: 1920px;
+  margin-top: 213px;
+  margin-bottom: 250px;
+  height: 790px;
+  background: url(./img/img-5.jpg) 0 0/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+main .bot {
+  width: 1470px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+main .bot .bot-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+main .bot .bot-div > div > p:nth-of-type(1) {
+  font-size: 25px;
+  font-weight: 600;
+}
+main .bot .bot-div > div > p:nth-of-type(1) span {
+  color: red;
+}
+main .bot .bot-div > .fig-2 {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+main .bot .bot-div > .fig-2 > figure {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .bot .bot-div > .fig-2 > figure div {
+  width: 171px;
+  height: 171px;
+  border: 1px solid #7a7a7a;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px;
+}
+main .bot .bot-div > .fig-2 > figure figcaption {
+  text-align: center;
+}
+main .bot .bot-div > .fig-2 > figure figcaption p:nth-of-type(1) {
+  font-weight: bold;
+}
+main .bot .bot-div > .fig-2 > figure figcaption p:nth-of-type(2) {
+  white-space: pre-line;
+}/*# sourceMappingURL=self.css.map */
