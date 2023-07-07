@@ -1,0 +1,1337 @@
+body, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "GmarketSansTTF";
+  src: url(../fonts/GmarketSansTTFMedium.ttf);
+}
+body {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  color: white;
+  z-index: 10;
+  margin-top: 10px;
+}
+header .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 13%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+}
+header .head .head1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin-top: 5px;
+}
+header .head nav {
+  width: 63%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .head nav a {
+  color: white;
+}
+header .head div > p {
+  display: flex;
+  align-items: center;
+}
+header .head div > p::after {
+  content: "arrow_drop_down";
+  font-family: material symbols outlined;
+  font-size: 50px;
+  transform: translate(-5px);
+}
+header .head div div {
+  display: none;
+}
+header .head div div span {
+  display: block;
+  border: 1px solid white;
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  margin: 7px;
+}
+
+main {
+  overflow: hidden;
+}
+main .s01 .bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/index-img/s1_bg00.jpg) 0 0/cover no-repeat;
+}
+main .s01 .bg > p:nth-of-type(1) {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .s01 .bg > p:nth-of-type(2) {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .s01 .bg > p:nth-of-type(3) {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .s01 .bg > p:nth-of-type(4) {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .s01 .bg > p:nth-of-type(5) {
+  position: absolute;
+  left: 30%;
+  top: 8%;
+  width: 6vw;
+}
+main .s01 .bg > p:nth-of-type(5) img {
+  width: 100%;
+}
+main .s01 .bg > p:nth-of-type(6) {
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 8vw;
+}
+main .s01 .bg > p:nth-of-type(6) img {
+  width: 100%;
+}
+main .s01 .bg > p:nth-of-type(7) {
+  position: absolute;
+  left: 65%;
+  top: 12%;
+  width: 8vw;
+}
+main .s01 .bg > p:nth-of-type(7) img {
+  width: 100%;
+}
+main .s01 .bg > p:nth-of-type(8) {
+  position: absolute;
+  left: 72%;
+  top: 26%;
+  width: 6vw;
+}
+main .s01 .bg > p:nth-of-type(8) img {
+  width: 100%;
+}
+main .s01 .bg > p:nth-of-type(9) {
+  position: absolute;
+  right: 5%;
+  bottom: -8.5%;
+}
+main .s01 .bg > p:nth-of-type(9) > img {
+  width: 20vw;
+}
+main .s01 .bg > p:nth-of-type(10) {
+  position: absolute;
+  left: 7%;
+  bottom: -8.5%;
+}
+main .s01 .bg > p:nth-of-type(10) > img {
+  width: 10vw;
+}
+main .s01 .bg figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  transform: translate(-60%);
+  top: 18%;
+  color: white;
+  width: 50%;
+}
+main .s01 .bg figure > img {
+  max-width: 100%;
+}
+main .s01 .bg figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 440px;
+}
+main .s01 .bg figure figcaption > p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+}
+main .s01 .bg figure figcaption > h2 {
+  font-family: "GmarketSansTTF";
+  padding-top: 10px;
+  font-size: 40px;
+  margin: 10px;
+}
+main .s01 > p {
+  background: url(../img/index-img/w_wave.png);
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 92%;
+  animation: wave1 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes wave1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1920px 0;
+  }
+}
+main .s02 {
+  position: relative;
+}
+main .s02 figure {
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main .s02 figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-family: "GmarketSansTTF";
+  font-size: 22px;
+}
+main .s02 article {
+  position: relative;
+}
+main .s02 article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+main .s02 article ul {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+}
+main .s02 article ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+main .s02 article ul li p {
+  padding-left: 50px;
+}
+main .s02 article ul li h2 {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 19%;
+  font-size: 25px;
+  background-color: #364b4d;
+  color: #ffffff;
+  padding: 0 25px;
+  border-radius: 20px;
+}
+main .s02 article > p:nth-of-type(1) {
+  position: absolute;
+  top: 45%;
+}
+main .s02 article > p:nth-of-type(1) > img {
+  width: 25vw;
+}
+main .s02 article > p:nth-of-type(2) {
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  overflow: hidden;
+}
+main .s02 article > p:nth-of-type(2) > img {
+  width: 25vw;
+}
+main .s02 article > p:nth-of-type(3) {
+  background: url(../img/index-img/p_wave.png);
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 150%;
+  animation: wave2 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes wave2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1920px 0;
+  }
+}
+main .s03 {
+  margin-top: 336px;
+  background-color: #45286a;
+  padding-bottom: 100px;
+  position: relative;
+}
+main .s03 > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .s03 > p img {
+  width: 50%;
+}
+main .s03 .box {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(420px);
+  margin: 0 8%;
+}
+main .s03 .box #box1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .s03 .box #box1 > img {
+  width: 40px;
+  height: 40px;
+}
+main .s03 .box #box2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .s03 .box #box2 > img {
+  width: 40px;
+  height: 40px;
+}
+main .s03 .main03 {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  display: flex;
+  width: 100%;
+  padding-left: 16.5vw;
+}
+main .s03 .main03 .m_text {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 60%;
+  color: #ffffff;
+  padding-right: 12%;
+}
+main .s03 .main03 .m_text > p:nth-of-type(1) {
+  font-family: "GmarketSansTTF";
+}
+main .s03 .main03 .m_text > p:nth-of-type(1) span:nth-of-type(1) {
+  font-size: 3vw;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  font-weight: 550;
+  display: inline-block;
+  width: 130%;
+}
+main .s03 .main03 .m_text > p:nth-of-type(1) span:nth-of-type(2) {
+  font-size: 3.8vw;
+  font-weight: bold;
+}
+main .s03 .main03 .m_text > p:nth-of-type(2) {
+  font-family: "GmarketSansTTF";
+  font-size: 1.3vw;
+  padding: 35px 0;
+  width: 120%;
+}
+main .s03 .main03 .m_text ul {
+  color: #cccccc;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+}
+main .s03 .main03 .slide3 {
+  display: flex;
+  width: 70%;
+}
+main .s03 .main03 .slide3 p {
+  width: 70%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+main .s03 .main03 .slide3 img {
+  width: cover;
+}
+main .s03 .wave3 {
+  background: url(../img/index-img/w_wave.png);
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  animation: wave3 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes wave3 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1920px 0;
+  }
+}
+main .s04 {
+  position: relative;
+  margin-top: 5%;
+}
+main .s04 .m_text2 {
+  text-align: center;
+  margin-bottom: 45px;
+}
+main .s04 .m_text2 h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 20px;
+  font-family: "GmarketSansTTF";
+}
+main .s04 .m_text2 p {
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+main .s04 .slide4 {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+main .s04 .slide4 a {
+  width: 30%;
+  z-index: 10;
+}
+main .s04 .slide4 a img {
+  width: 100%;
+}
+main .s04 .slide4 a:nth-of-type(2) {
+  width: 35%;
+}
+main .s04 .side4 p:nth-of-type(1) {
+  position: absolute;
+  top: 3%;
+  left: 15%;
+}
+main .s04 .side4 p:nth-of-type(2) {
+  position: absolute;
+  top: 3%;
+  left: 85%;
+}
+main .s04 .side4 p:nth-of-type(3) {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+}
+main .s04 .side4 p:nth-of-type(3) > img {
+  width: 18vw;
+}
+main .s04 .side4 p:nth-of-type(4) {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+}
+main .s04 .side4 p:nth-of-type(4) > img {
+  width: 20vw;
+}
+main .s05 {
+  margin-top: 8%;
+  position: relative;
+}
+main .s05 .h05 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+main .s05 .h05 > h2 {
+  font-family: "GmarketSansTTF";
+  font-size: 40px;
+  font-weight: 600;
+}
+main .s05 .h05 > p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+}
+main .s05 ul {
+  width: 67%;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+}
+main .s05 ul span {
+  font-size: 30px;
+  font-weight: 800;
+  color: #00aeb7;
+  display: inline-block;
+  height: 17px;
+  padding-bottom: 5px;
+}
+main .s05 ul li:nth-of-type(1) {
+  border-top: 2px solid #1fadb7;
+  border-bottom: 1px solid black;
+}
+main .s05 ul li:nth-of-type(1) a {
+  display: flex;
+}
+main .s05 ul li:nth-of-type(1) a > div {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .s05 ul li:nth-of-type(1) a > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  font-size: 20px;
+  transition: 0.5s;
+}
+main .s05 ul li:nth-of-type(2) {
+  border-bottom: 1px solid black;
+}
+main .s05 ul li:nth-of-type(2) a {
+  display: flex;
+}
+main .s05 ul li:nth-of-type(2) a > div:nth-of-type(1) {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .s05 ul li:nth-of-type(2) a > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 40px;
+  font-size: 20px;
+}
+main .s05 ul li:nth-of-type(2) a > div:nth-of-type(2) > p:nth-of-type(1) {
+  transition: 0.5s;
+}
+main .s05 ul li:nth-of-type(2) a > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-size: 16px;
+}
+main .s05 > p {
+  position: absolute;
+  top: 80%;
+  left: 6%;
+}
+main .s05 > p > img {
+  width: 15vw;
+}
+main .s05 ul a:nth-of-type(1):hover p {
+  color: #00aeb7;
+}
+main .s05 ul a:nth-of-type(2):hover p:nth-of-type(1) {
+  color: #00aeb7;
+}
+main .s06 {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  margin-bottom: 120px;
+}
+main .s06 .h06 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 170px;
+}
+main .s06 .h06 > h2 {
+  font-family: "GmarketSansTTF";
+  font-size: 40px;
+}
+main .s06 .h06 > p {
+  font-size: 18px;
+}
+main .s06 figure {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 17%;
+}
+main .s06 figure > p {
+  width: 100%;
+  overflow: hidden;
+}
+main .s06 figure > p img {
+  width: 100%;
+  transition: 0.5s;
+}
+main .s06 figure figcaption p:nth-of-type(1) {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 17px;
+  transition: 0.5s;
+}
+main .s06 figure figcaption p:nth-of-type(2) {
+  font-size: 17px;
+  margin-bottom: 17px;
+}
+main .s06 figure figcaption p:nth-of-type(3) {
+  font-size: 16px;
+}
+main .s06 .box2 {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-280px);
+  margin: 0 8%;
+}
+main .s06 .box2 #box3 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  position: absolute;
+}
+main .s06 .box2 #box3 > img {
+  width: 40px;
+  height: 40px;
+}
+main .s06 .box2 #box4 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  position: absolute;
+  right: 0%;
+}
+main .s06 .box2 #box4 > img {
+  width: 40px;
+  height: 40px;
+}
+main .s06 > p {
+  position: absolute;
+  top: 80%;
+  right: 1%;
+}
+main .s06 > p > img {
+  width: 16vw;
+}
+main .s06 .wave6 {
+  background: url(../img/index-img/g_wave.png);
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  top: 105%;
+  animation: wave6 20s infinite;
+  animation-timing-function: linear;
+}
+@keyframes wave6 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1920px 0;
+  }
+}
+main #hover1:hover #hover11 {
+  color: #00aeb7;
+}
+main #hover1:hover img {
+  transform: scale(120%);
+  transition: 0.5s;
+}
+main #box3:hover {
+  background-color: #00aeb7;
+}
+main #box4:hover {
+  background-color: #00aeb7;
+}
+
+.side1 {
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  height: 37%;
+  z-index: 999;
+}
+.side1 a:nth-of-type(1) > div {
+  border-radius: 50%;
+  background-color: #1fadb7;
+  color: white;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  transition: 0.5s;
+}
+.side1 a:nth-of-type(1) > div > figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px;
+}
+.side1 a:nth-of-type(1) > div > figure #cir1 {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.side1 a:nth-of-type(1) > div > figure > figcaption {
+  padding-top: 10px;
+  font-family: "GmarketSansTTF";
+}
+.side1 a:nth-of-type(1):hover > div {
+  background-color: rgba(170, 65, 109, 0.671);
+}
+.side1 a:nth-of-type(2) > div {
+  border-radius: 50%;
+  background-color: #ef7b62;
+  color: white;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.5s;
+}
+.side1 a:nth-of-type(2) > div > figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.side1 a:nth-of-type(2) > div > figure #cir2 {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.side1 a:nth-of-type(2) > div > figure > figcaption {
+  padding-top: 10px;
+  font-family: "GmarketSansTTF";
+}
+.side1 a:nth-of-type(2):hover > div {
+  background-color: rgba(185, 22, 145, 0.671);
+}
+
+.side2 {
+  position: fixed;
+  right: 8%;
+  top: 82%;
+  z-index: 998;
+}
+.side2 div {
+  border-radius: 50%;
+  background-color: #45286a;
+  color: #00aeb7;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side2 div figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.side2 div figure figcaption {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #00aeb7;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+}
+footer p {
+  margin-right: 50px;
+}
+footer div {
+  padding-right: 35px;
+}
+footer figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer figure a:nth-of-type(1) {
+  margin-right: 15px;
+}
+footer figure a:nth-of-type(1) #face {
+  width: 100%;
+}
+footer figure a:nth-of-type(2) #insta {
+  width: 100%;
+}
+
+@media (width <= 1280px) {
+  header {
+    width: 100%;
+    position: absolute;
+    color: white;
+    z-index: 10;
+    margin-top: 10px;
+  }
+  header .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    margin: 0 2%;
+  }
+  header .head .head1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+    margin-top: 5px;
+  }
+  header .head .head1 a:nth-of-type(1) img {
+    width: 60px;
+  }
+  header .head .head1 a:nth-of-type(2) img {
+    width: 65px;
+  }
+  header .head nav {
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+  }
+  header .head nav a {
+    color: white;
+  }
+  header .head div {
+    display: flex;
+    align-items: center;
+  }
+  header .head div div {
+    display: block;
+  }
+  main .s02 figure figcaption p {
+    font-size: 18px;
+  }
+  main .s02 article div ul li {
+    font-size: 18px;
+  }
+  main .s02 article div ul li h2 {
+    font-size: 22px;
+  }
+  main .s06 .box2 {
+    margin: 0 4%;
+  }
+  main .s06 .box2 #box3 {
+    width: 75px;
+    height: 75px;
+  }
+  main .s06 .box2 #box3 img {
+    width: 30px;
+    height: 25px;
+  }
+  main .s06 .box2 #box4 {
+    width: 75px;
+    height: 75px;
+  }
+  main .s06 .box2 #box4 img {
+    width: 30px;
+    height: 25px;
+  }
+  .side1 {
+    position: fixed;
+    right: 5%;
+    top: 30%;
+    height: 37%;
+    z-index: 999;
+  }
+  .side1 a:nth-of-type(1) > div {
+    border-radius: 50%;
+    background-color: #1fadb7;
+    color: white;
+    width: 115px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .side1 a:nth-of-type(1) > div > figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .side1 a:nth-of-type(1) > div > figure #cir1 {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 140px;
+  }
+  .side1 a:nth-of-type(1) > div > figure img:nth-of-type(2) {
+    width: 70%;
+  }
+  .side1 a:nth-of-type(1) > div > figure > figcaption {
+    padding-top: 10px;
+    font-family: "GmarketSansTTF";
+    font-size: 14px;
+  }
+  .side1 a:nth-of-type(1):hover > div {
+    background-color: rgba(170, 65, 109, 0.671);
+  }
+  .side1 a:nth-of-type(2) div {
+    border-radius: 50%;
+    background-color: #ef7b62;
+    color: white;
+    width: 115px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .side1 a:nth-of-type(2) div > figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+  }
+  .side1 a:nth-of-type(2) div > figure #cir2 {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 140px;
+  }
+  .side1 a:nth-of-type(2) div > figure img:nth-of-type(2) {
+    width: 70%;
+  }
+  .side1 a:nth-of-type(2) div > figure > figcaption {
+    padding-top: 10px;
+    font-family: "GmarketSansTTF";
+    font-size: 14px;
+  }
+  .side1 a:nth-of-type(2):hover > div {
+    background-color: rgba(185, 22, 145, 0.671);
+  }
+}
+@media (width <= 768px) {
+  main .s01 .bg > p:nth-of-type(1) {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .s01 .bg > p:nth-of-type(2) {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .s01 .bg > p:nth-of-type(3) {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .s01 .bg > p:nth-of-type(4) {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .s01 .bg figure {
+    top: 25%;
+  }
+  main .s01 .bg figure figcaption p {
+    font-size: 20px;
+  }
+  main .s01 .bg figure figcaption h2 {
+    font-size: 30px;
+  }
+  main .s02 figure figcaption p {
+    font-size: 18px;
+  }
+  main .s02 article div ul li {
+    font-size: 16px;
+  }
+  main .s02 article div ul li h2 {
+    font-size: 18px;
+  }
+  main .s02 article div ul li p {
+    padding-left: 10px;
+  }
+  main .s02 article p:nth-of-type(1) {
+    top: 85%;
+  }
+  main .s02 article p:nth-of-type(2) {
+    top: 95%;
+  }
+  main .s02 article p:nth-of-type(3) {
+    top: 120%;
+  }
+  main .s03 {
+    margin-bottom: 200px;
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  main .s03 .box {
+    margin: 0 3%;
+    transform: translateY(300px);
+  }
+  main .s03 .box #box1 {
+    width: 70px;
+    height: 70px;
+  }
+  main .s03 .box #box2 {
+    width: 70px;
+    height: 70px;
+  }
+  main .s03 .main03 .m_text p:nth-of-type(1) span:nth-of-type(1) {
+    font-size: 40px;
+    position: absolute;
+    left: 99%;
+    transform: translate(-50%);
+    top: 13%;
+  }
+  main .s03 .main03 .m_text p:nth-of-type(1) span:nth-of-type(2) {
+    font-size: 45px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 19%;
+  }
+  main .s03 .main03 .m_text p:nth-of-type(2) {
+    z-index: 5;
+    font-size: 16px;
+    position: absolute;
+    left: -10%;
+    top: 35%;
+    text-align: center;
+  }
+  main .s03 .main03 .m_text ul {
+    z-index: 5;
+    font-size: 14px;
+    position: absolute;
+    left: 44%;
+    top: 60%;
+    text-align: center;
+  }
+  main .s03 .main03 .slide3 p:nth-of-type(1) {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    transform: translateX(-50%);
+    width: 65%;
+  }
+  main .s03 .main03 .slide3 p:nth-of-type(2) {
+    display: none;
+  }
+  main .s03 .main03 .slide3 p:nth-of-type(3) {
+    display: none;
+  }
+  main .s03 .wave3 {
+    top: 99%;
+  }
+  main .s06 .box2 {
+    margin: 0 4%;
+  }
+  main .s06 .box2 #box3 {
+    width: 50px;
+    height: 50px;
+  }
+  main .s06 .box2 #box3 img {
+    width: 20px;
+    height: 20px;
+  }
+  main .s06 .box2 #box4 {
+    width: 50px;
+    height: 50px;
+  }
+  main .s06 .box2 #box4 img {
+    width: 20px;
+    height: 20px;
+  }
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  footer div {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  footer div div span:nth-of-type(2) {
+    display: block;
+  }
+  footer figure a:nth-of-type(1) {
+    position: absolute;
+    right: 12%;
+    top: 5%;
+    width: 8%;
+  }
+  footer figure a:nth-of-type(2) {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 8%;
+  }
+  .side1 a:nth-of-type(1) > div {
+    width: 100px;
+    height: 100px;
+  }
+  .side1 a:nth-of-type(1) > div > figure #cir1 {
+    width: 125px;
+  }
+  .side1 a:nth-of-type(1) > div > figure > figcaption {
+    font-size: 10px;
+  }
+  .side1 a:nth-of-type(2) > div {
+    width: 100px;
+    height: 100px;
+  }
+  .side1 a:nth-of-type(2) > div > figure #cir2 {
+    width: 125px;
+  }
+  .side1 a:nth-of-type(2) > div > figure > figcaption {
+    font-size: 10px;
+  }
+  .side2 div {
+    width: 80px;
+    height: 80px;
+  }
+  .side2 div figure img {
+    width: 22px;
+  }
+  .side2 div figure figcaption {
+    font-size: 16px;
+  }
+}
+@media (width <= 480px) {
+  main .s01 .bg > p:nth-of-type(9) {
+    bottom: 0%;
+  }
+  main .s01 .bg > p:nth-of-type(9) > img {
+    width: 29vw;
+  }
+  main .s01 .bg > p:nth-of-type(10) {
+    bottom: 0%;
+  }
+  main .s01 .bg > p:nth-of-type(10) > img {
+    width: 19vw;
+  }
+  main .s01 .bg > figure > figcaption {
+    transform: translateY(-210%);
+    width: 250px;
+  }
+  main .s01 .bg > figure > figcaption > p {
+    font-size: 14px;
+  }
+  main .s01 .bg > figure > figcaption > h2 {
+    font-size: 20px;
+  }
+  main .s01 > p {
+    top: 91%;
+  }
+  main .s02 > figure > img {
+    width: 1450px;
+  }
+  main .s02 > figure > figcaption {
+    font-size: 15px;
+  }
+  main .s02 article div ul li {
+    font-size: 14px;
+  }
+  main .s02 article div ul li > h2 {
+    font-size: 14px;
+  }
+  main .s02 article div ul li > p {
+    padding-left: 15px;
+  }
+  main .s02 article > p:nth-of-type(1) {
+    top: 140%;
+  }
+  main .s02 article > p:nth-of-type(2) {
+    top: 140%;
+  }
+  main .s03 {
+    padding-top: 12vh;
+    padding-bottom: 18vh;
+  }
+  main .s03 > p {
+    transform: translatey(-50px);
+  }
+  main .s03 .box {
+    transform: translatey(200px);
+  }
+  main .s03 .box a #box1 {
+    width: 50px;
+    height: 50px;
+  }
+  main .s03 .box a #box1 img {
+    width: 25px;
+    height: 25px;
+  }
+  main .s03 .box a #box2 {
+    width: 50px;
+    height: 50px;
+  }
+  main .s03 .box a #box2 img {
+    width: 25px;
+    height: 25px;
+  }
+  main .s03 .main03 .m_text p:nth-of-type(1) span:nth-of-type(1) {
+    left: 89%;
+  }
+  main .s03 .main03 .slide3 p {
+    height: 380px;
+  }
+  main .s03 .wave3 {
+    top: 96%;
+  }
+  main .s04 .m_text2 h2 {
+    font-size: 26px;
+  }
+  main .s04 .m_text2 p {
+    font-size: 14px;
+  }
+  main .s04 .side4 p:nth-of-type(1) > img {
+    width: 7vw;
+  }
+  main .s04 .side4 p:nth-of-type(2) > img {
+    width: 7vw;
+  }
+  main .s05 .h05 h2 {
+    font-size: 25px;
+  }
+  main .s05 .h05 p {
+    font-size: 14px;
+  }
+  main .s05 ul {
+    width: 85%;
+  }
+  main .s05 ul li:nth-of-type(1) a div {
+    font-size: 14px;
+  }
+  main .s05 ul li:nth-of-type(1) a div span {
+    font-size: 20px;
+  }
+  main .s05 ul li:nth-of-type(1) a p {
+    font-size: 14px;
+    padding-left: 0;
+  }
+  main .s05 ul li:nth-of-type(2) a div:nth-of-type(1) {
+    font-size: 14px;
+  }
+  main .s05 ul li:nth-of-type(2) a div:nth-of-type(1) span {
+    font-size: 20px;
+  }
+  main .s05 ul li:nth-of-type(2) a div:nth-of-type(2) {
+    padding-left: 0;
+  }
+  main .s05 ul li:nth-of-type(2) a div:nth-of-type(2) p:nth-of-type(1) {
+    font-size: 14px;
+  }
+  main .s05 ul li:nth-of-type(2) a div:nth-of-type(2) p:nth-of-type(2) {
+    font-size: 13px;
+  }
+  main .s06 .h06 h2 {
+    font-size: 25px;
+  }
+  main .s06 .h06 p {
+    font-size: 14px;
+  }
+  main .s06 a {
+    display: block;
+  }
+  main .s06 a #hover1 {
+    width: 60%;
+    margin: 100px auto;
+  }
+  main .s06 a #hover1 figcaption #hover11 {
+    font-size: 16px;
+  }
+  main .s06 a #hover1 figcaption p:nth-of-type(2) {
+    font-size: 14px;
+  }
+  main .s06 a #hover1 figcaption p:nth-of-type(3) {
+    font-size: 14px;
+  }
+  main .s06 p {
+    top: 95%;
+  }
+  main .s06 p img {
+    width: 20vw;
+  }
+  .side2 div {
+    width: 50px;
+    height: 50px;
+  }
+  .side2 div figure img {
+    width: 15px;
+  }
+  .side2 div figure figcaption {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=index.css.map */
