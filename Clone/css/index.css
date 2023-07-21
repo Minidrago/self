@@ -27,10 +27,12 @@ body {
 
 header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   color: white;
   z-index: 10;
-  margin-top: 10px;
+  padding: 15px;
+  top: 0;
+  left: 0;
 }
 header .head {
   display: flex;
@@ -47,13 +49,32 @@ header .head .head1 {
   width: 20%;
   margin-top: 5px;
 }
-header .head nav {
+header .head ul {
   width: 63%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .head nav a {
+header .head ul li {
+  position: relative;
+  width: 100%;
+}
+header .head ul li ul {
+  flex-direction: column;
+  padding-top: 100px;
+  position: absolute;
+  top: 100%;
+  align-items: start;
+  font-size: 18px;
+  color: #ccc;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+}
+header .head ul li ul a {
+  padding: 5px 0;
+}
+header .head ul li a {
   color: white;
 }
 header .head div > p {
@@ -77,8 +98,95 @@ header .head div div span {
   background-color: white;
   margin: 7px;
 }
+header .head2 {
+  width: 100%;
+  height: 260px;
+  display: none;
+}
+
+header.active {
+  width: 100%;
+  color: white;
+  z-index: 10;
+  background-color: #45286a;
+}
+header.active .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 13%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+}
+header.active .head .head1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin-top: 5px;
+}
+header.active .head ul {
+  width: 63%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.active .head ul li {
+  position: relative;
+}
+header.active .head ul li ul {
+  padding-top: 100px;
+  position: absolute;
+  top: 100%;
+  align-items: start;
+  font-size: 18px;
+  color: #ccc;
+  width: 100%;
+  left: 0;
+  opacity: 1;
+  transform: translateY(0);
+}
+header.active .head ul li a {
+  color: white;
+}
+header.active .head div > p {
+  display: flex;
+  align-items: center;
+}
+header.active .head div > p::after {
+  content: "arrow_drop_down";
+  font-family: material symbols outlined;
+  font-size: 50px;
+  transform: translate(-5px);
+}
+header.active .head div div {
+  display: none;
+}
+header.active .head div div span {
+  display: block;
+  border: 1px solid white;
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  margin: 7px;
+}
+header.active .head2 {
+  width: 100%;
+  height: 260px;
+  background-color: #45286a;
+  background: url(../img/index-img/header_img.png) no-repeat 18% 50%;
+  display: block;
+}
+
+header.on {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
 
 main {
+  overflow: hidden;
+}
+main .s01 {
   overflow: hidden;
 }
 main .s01 .bg {
@@ -95,21 +203,49 @@ main .s01 .bg > p:nth-of-type(1) {
 }
 main .s01 .bg > p:nth-of-type(2) {
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -5%;
+  left: 0%;
+  transform: translateY(60%);
+  animation: ani-3 1.2s forwards;
+  animation-delay: 1.2s;
+}
+@keyframes ani-3 {
+  0% {
+    transform: translateY(100%) scale(0);
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+  }
 }
 main .s01 .bg > p:nth-of-type(3) {
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -5%;
+  left: 0%;
+  transform: translateY(40%);
+  animation: ani-2 1.2s forwards;
+  animation-delay: 0.6s;
+}
+@keyframes ani-2 {
+  0% {
+    transform: translateY(100%) scale(0);
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+  }
 }
 main .s01 .bg > p:nth-of-type(4) {
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -5%;
+  left: 0%;
+  animation: ani-1 1s;
+}
+@keyframes ani-1 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 main .s01 .bg > p:nth-of-type(5) {
   position: absolute;
@@ -169,11 +305,21 @@ main .s01 .bg figure {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  left: 50%;
-  transform: translate(-60%);
-  top: 18%;
+  left: 24%;
+  transform: translateY(200%);
+  top: 14%;
   color: white;
   width: 50%;
+  animation: ani-4 1s forwards;
+  animation-delay: 2.4s;
+}
+@keyframes ani-4 {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 main .s01 .bg figure > img {
   max-width: 100%;
@@ -222,6 +368,9 @@ main .s02 figure {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s02 figure figcaption {
   display: flex;
@@ -239,6 +388,9 @@ main .s02 article div {
   justify-content: center;
   align-items: center;
   margin-top: 60px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s02 article ul {
   font-family: "Noto Sans KR", sans-serif;
@@ -297,11 +449,24 @@ main .s02 article > p:nth-of-type(3) {
     background-position: -1920px 0;
   }
 }
+main .s02.active figure {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s02.active article div {
+  opacity: 1;
+  transform: translateY(0%);
+}
 main .s03 {
   margin-top: 336px;
   background-color: #45286a;
   padding-bottom: 100px;
   position: relative;
+}
+main .s03 p:nth-of-type(1) {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s03 > p {
   display: flex;
@@ -314,8 +479,12 @@ main .s03 > p img {
 main .s03 .box {
   display: flex;
   justify-content: space-between;
-  transform: translateY(420px);
+  transform: translateY(520px);
   margin: 0 8%;
+  opacity: 0;
+  transition: 1s;
+  position: relative;
+  z-index: 5;
 }
 main .s03 .box #box1 {
   width: 100px;
@@ -347,12 +516,15 @@ main .s03 .main03 {
   display: flex;
   width: 100%;
   padding-left: 16.5vw;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s03 .main03 .m_text {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  width: 60%;
+  width: 30%;
   color: #ffffff;
   padding-right: 12%;
 }
@@ -382,17 +554,21 @@ main .s03 .main03 .m_text ul {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1vw;
 }
-main .s03 .main03 .slide3 {
-  display: flex;
+main .s03 .main03 .mySwiper {
   width: 70%;
+  overflow: hidden;
 }
-main .s03 .main03 .slide3 p {
-  width: 70%;
+main .s03 .main03 .mySwiper .swiper-wrapper {
+  display: flex;
+  width: 100%;
+}
+main .s03 .main03 .mySwiper .swiper-wrapper p {
+  width: 100%;
   flex-shrink: 0;
   overflow: hidden;
 }
-main .s03 .main03 .slide3 img {
-  width: cover;
+main .s03 .main03 .mySwiper .swiper-wrapper img {
+  width: 100%;
 }
 main .s03 .wave3 {
   background: url(../img/index-img/w_wave.png);
@@ -411,6 +587,18 @@ main .s03 .wave3 {
     background-position: -1920px 0;
   }
 }
+main .s03.active p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s03.active .box {
+  opacity: 1;
+  transform: translateY(420px);
+}
+main .s03.active .main03 {
+  opacity: 1;
+  transform: translateY(0%);
+}
 main .s04 {
   position: relative;
   margin-top: 5%;
@@ -418,6 +606,9 @@ main .s04 {
 main .s04 .m_text2 {
   text-align: center;
   margin-bottom: 45px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s04 .m_text2 h2 {
   font-size: 40px;
@@ -429,22 +620,38 @@ main .s04 .m_text2 p {
   font-size: 18px;
   font-family: "Noto Sans KR", sans-serif;
 }
-main .s04 .slide4 {
+main .s04 .mySwiper2 {
   width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
-main .s04 .slide4 a {
-  width: 30%;
-  z-index: 10;
-}
-main .s04 .slide4 a img {
+main .s04 .mySwiper2 .swiper-wrapper {
   width: 100%;
+  display: flex;
 }
-main .s04 .slide4 a:nth-of-type(2) {
-  width: 35%;
+main .s04 .mySwiper2 .swiper-wrapper a {
+  width: 500px;
+  flex-shrink: 0;
+}
+main .s04 .mySwiper2 .swiper-wrapper a:nth-of-type(3) {
+  position: relative;
+}
+main .s04 .mySwiper2 .swiper-wrapper a:nth-of-type(3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+main .s04 .mySwiper2 .swiper-wrapper a img {
+  width: 100%;
+  height: 100%;
 }
 main .s04 .side4 p:nth-of-type(1) {
   position: absolute;
@@ -472,6 +679,14 @@ main .s04 .side4 p:nth-of-type(4) {
 main .s04 .side4 p:nth-of-type(4) > img {
   width: 20vw;
 }
+main .s04.active .m_text2 {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s04.active .mySwiper2 {
+  opacity: 1;
+  transform: translateY(0%);
+}
 main .s05 {
   margin-top: 8%;
   position: relative;
@@ -482,6 +697,9 @@ main .s05 .h05 {
   align-items: center;
   flex-direction: column;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s05 .h05 > h2 {
   font-family: "GmarketSansTTF";
@@ -496,6 +714,9 @@ main .s05 ul {
   width: 67%;
   margin: 0 auto;
   font-family: "Noto Sans KR", sans-serif;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s05 ul span {
   font-size: 30px;
@@ -562,6 +783,14 @@ main .s05 > p {
 main .s05 > p > img {
   width: 15vw;
 }
+main .s05.active .h05 {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s05.active ul {
+  opacity: 1;
+  transform: translateY(0%);
+}
 main .s05 ul a:nth-of-type(1):hover p {
   color: #00aeb7;
 }
@@ -579,6 +808,9 @@ main .s06 .h06 {
   align-items: center;
   flex-direction: column;
   margin-top: 170px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s06 .h06 > h2 {
   font-family: "GmarketSansTTF";
@@ -593,6 +825,9 @@ main .s06 figure {
   flex-direction: column;
   margin-top: 100px;
   margin-left: 17%;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 main .s06 figure > p {
   width: 100%;
@@ -619,8 +854,10 @@ main .s06 figure figcaption p:nth-of-type(3) {
 main .s06 .box2 {
   display: flex;
   justify-content: space-between;
-  transform: translateY(-280px);
+  transform: translateY(-180px);
   margin: 0 8%;
+  opacity: 0;
+  transition: 1s;
 }
 main .s06 .box2 #box3 {
   width: 100px;
@@ -675,6 +912,18 @@ main .s06 .wave6 {
   100% {
     background-position: -1920px 0;
   }
+}
+main .s06.active .h06 {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s06.active a figure {
+  opacity: 1;
+  transform: translateY(0%);
+}
+main .s06.active .box2 {
+  opacity: 1;
+  transform: translateY(-280px);
 }
 main #hover1:hover #hover11 {
   color: #00aeb7;
@@ -849,15 +1098,8 @@ footer figure a:nth-of-type(2) #insta {
   header .head .head1 a:nth-of-type(2) img {
     width: 65px;
   }
-  header .head nav {
-    width: 63%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  header .head ul {
     display: none;
-  }
-  header .head nav a {
-    color: white;
   }
   header .head div {
     display: flex;
@@ -1334,4 +1576,4 @@ footer figure a:nth-of-type(2) #insta {
   .side2 div figure figcaption {
     font-size: 12px;
   }
-}/*# sourceMappingURL=index.css.map */
+}
