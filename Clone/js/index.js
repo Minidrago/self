@@ -24,7 +24,10 @@ function fireFun(){
     })
     setTimeout(fireFun,5000)
 }
-fireFun();
+
+setTimeout(fireFun, 4000);
+
+
 
 
 
@@ -49,7 +52,6 @@ function heads() {
         } else {
             $('header').removeClass('active');
         }
-
     })
 }
 
