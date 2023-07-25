@@ -53,7 +53,24 @@ function heads() {
             $('header').removeClass('active');
         }
     })
+
+    $('header').find('.burger')
+    .on('click', function(){
+        $('header').find('.burgerBox')
+        .css({"display":"block"});
+        
+    })
+
+    $('header').find('.close')
+    .on('click', function(){
+        $('header').find('.burgerBox')
+        .css({"display":"none"});
+    })
+
 }
+
+
+    
 
 window.addEventListener('scroll', function () {
     
@@ -64,6 +81,8 @@ window.addEventListener('scroll', function () {
     }
 
 })
+
+
 
 
 

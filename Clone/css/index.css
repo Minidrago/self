@@ -58,21 +58,27 @@ header .head ul {
 header .head ul li {
   position: relative;
   width: 100%;
+  text-align: center;
+  display: flex;
 }
-header .head ul li ul {
+header .head ul li > ul {
   flex-direction: column;
+  display: flex;
   padding-top: 100px;
   position: absolute;
   top: 100%;
-  align-items: start;
   font-size: 18px;
   color: #ccc;
   width: 100%;
   left: 0;
   opacity: 0;
 }
-header .head ul li ul a {
+header .head ul li > ul > li {
+  text-align: center;
+}
+header .head ul li > ul > a {
   padding: 5px 0;
+  text-align: center;
 }
 header .head ul li a {
   color: white;
@@ -103,7 +109,42 @@ header .head2 {
   height: 260px;
   display: none;
 }
-
+header .burgerBox {
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  right: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.8;
+  font-size: 50px;
+  display: none;
+}
+header .burgerBox div span {
+  display: block;
+  border: 1px solid white;
+  width: 60px;
+  height: 3px;
+  margin: 20px;
+  background-color: white;
+}
+header .burgerBox div span:nth-of-type(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+header .burgerBox div span:nth-of-type(2) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+header .burgerBox ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+header .burgerBox ul a {
+  padding: 3%;
+  opacity: 1;
+}
 header.active {
   width: 100%;
   color: white;
@@ -312,10 +353,8 @@ main .s01 .bg figure {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  left: 24%;
-  transform: translateY(120%);
-  top: 14%;
+  margin: 0 auto;
+  padding-top: 9%;
   color: white;
   width: 50%;
   height: 420px;
@@ -341,7 +380,7 @@ main .s01 .bg figure figcaption {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  padding-top: 10px;
   top: 440px;
 }
 main .s01 .bg figure figcaption > p {
@@ -605,7 +644,6 @@ main .s03.active p:nth-of-type(1) {
 }
 main .s03.active .box {
   opacity: 1;
-  transform: translateY(420px);
 }
 main .s03.active .main03 {
   opacity: 1;
@@ -1090,10 +1128,9 @@ footer figure a:nth-of-type(2) #insta {
 @media (width <= 1280px) {
   header {
     width: 100%;
-    position: absolute;
+    position: fixed;
     color: white;
     z-index: 10;
-    margin-top: 10px;
   }
   header .head {
     display: flex;
@@ -1126,6 +1163,9 @@ footer figure a:nth-of-type(2) #insta {
   header .head div div {
     display: block;
   }
+  main .s01 .bg figure {
+    padding-top: 15%;
+  }
   main .s02 figure figcaption p {
     font-size: 18px;
   }
@@ -1134,6 +1174,17 @@ footer figure a:nth-of-type(2) #insta {
   }
   main .s02 article div ul li h2 {
     font-size: 22px;
+  }
+  main .s03 .box {
+    transform: translateY(300%);
+  }
+  main .s03 .box #box1 {
+    width: 85px;
+    height: 85px;
+  }
+  main .s03 .box #box2 {
+    width: 85px;
+    height: 85px;
   }
   main .s06 .box2 {
     margin: 0 4%;
@@ -1258,7 +1309,7 @@ footer figure a:nth-of-type(2) #insta {
     transform: translateX(-50%);
   }
   main .s01 .bg figure {
-    top: 25%;
+    padding-top: 30%;
   }
   main .s01 .bg figure figcaption p {
     font-size: 20px;
@@ -1292,7 +1343,7 @@ footer figure a:nth-of-type(2) #insta {
     margin-top: 150px;
     padding-top: 20px;
     padding-bottom: 50px;
-    position: relative;
+    display: block;
   }
   main .s03 .box {
     margin: 0 3%;
@@ -1306,51 +1357,45 @@ footer figure a:nth-of-type(2) #insta {
     width: 70px;
     height: 70px;
   }
+  main .s03 .main03 {
+    display: block;
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  main .s03 .main03 .m_text {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   main .s03 .main03 .m_text p:nth-of-type(1) span:nth-of-type(1) {
     font-size: 40px;
-    position: absolute;
-    left: 99%;
-    transform: translate(-50%);
-    top: 13%;
+    width: auto;
   }
   main .s03 .main03 .m_text p:nth-of-type(1) span:nth-of-type(2) {
     font-size: 45px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 19%;
   }
   main .s03 .main03 .m_text p:nth-of-type(2) {
     z-index: 5;
     font-size: 16px;
-    position: absolute;
-    left: -10%;
-    top: 35%;
     text-align: center;
+    padding: 15px;
   }
   main .s03 .main03 .m_text ul {
     z-index: 5;
     font-size: 14px;
-    position: absolute;
-    left: 44%;
-    top: 60%;
+    display: none;
     text-align: center;
   }
-  main .s03 .main03 .slide3 p:nth-of-type(1) {
-    position: absolute;
-    left: 50%;
-    top: 28%;
-    transform: translateX(-50%);
-    width: 65%;
-  }
-  main .s03 .main03 .slide3 p:nth-of-type(2) {
-    display: none;
-  }
-  main .s03 .main03 .slide3 p:nth-of-type(3) {
-    display: none;
+  main .s03 .main03 .mySwiper {
+    margin: 0 auto;
   }
   main .s03 .wave3 {
-    top: 99%;
+    top: 85%;
   }
   main .s06 .box2 {
     margin: 0 4%;
@@ -1441,8 +1486,10 @@ footer figure a:nth-of-type(2) #insta {
   main .s01 .bg > p:nth-of-type(10) > img {
     width: 19vw;
   }
+  main .s01 .bg > figure {
+    padding-top: 55%;
+  }
   main .s01 .bg > figure > figcaption {
-    transform: translateY(-210%);
     width: 250px;
   }
   main .s01 .bg > figure > figcaption > p {

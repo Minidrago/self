@@ -49,21 +49,30 @@ header {
             li {
                 position: relative;
                 width: 100%;
+                text-align: center;
+                display: flex;
+                
 
-                ul {
+                >ul {
                     flex-direction: column;
+                    display: flex;
                     padding-top: 100px;
                     position: absolute;
                     top: 100%;
-                    align-items: start;
                     font-size: 18px;
                     color: #ccc;
                     width: 100%;
                     left: 0;
                     opacity: 0;
                     
-                    a{
+                    
+                    >li{
+                        text-align: center;
+                    }
+                    
+                    >a{
                         padding: 5px 0;
+                        text-align: center;
                     }
                     
                 }
@@ -73,10 +82,6 @@ header {
                 }
             }
         }
-
-
-
-
 
         div {
             >p {
@@ -112,8 +117,52 @@ header {
         height: 260px;
         display: none;
     }
+    .burgerBox{
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        right: 0;
+        top: 0;
+        background-color: black;
+        opacity: 0.8;
+        font-size: 50px;
+        display: none;
+        div{
+            span{
+            display: block;
+            border: 1px solid white;
+            width: 60px;
+            height: 3px;
+            margin: 20px;
+            background-color: white;
+            
+            }
+            span:nth-of-type(1){
+                transform: translateY(11px) rotate(45deg);
+                
+            }
+            span:nth-of-type(2){
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            a{
+                padding: 3%;
+                opacity: 1;
+                li{
+                
+            }
+        }
+        }
+        // display: none;
 
-   
+    }
+
 }
 
 header.active {
@@ -355,10 +404,9 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: column;
-                position: absolute;
-                left: 24%;
-                transform: translateY(120%);
-                top: 14%;
+                margin: 0 auto;
+                padding-top: 9%;
+                
                 color: white;
                 width: 50%;
                 height: 420px;
@@ -384,7 +432,7 @@ main {
                     justify-content: space-between;
                     align-items: center;
                     flex-direction: column;
-                    position: absolute;
+                    padding-top: 10px;
                     top: 440px;
 
                     >p {
@@ -710,7 +758,6 @@ main {
         }
         .box{
             opacity: 1;
-            transform: translateY(420px);
         }
         .main03{
             opacity: 1;

@@ -2,10 +2,9 @@
 
     header {
         width: 100%;
-        position: absolute;
+        position: fixed;
         color: white;
         z-index: 10;
-        margin-top: 10px;
 
 
         .head {
@@ -43,6 +42,13 @@
     }
 
     main {
+        .s01{
+            .bg{
+                figure{
+                    padding-top: 15%;
+                }
+            }
+        }
         .s02 {
             figure {
                 figcaption {
@@ -59,6 +65,18 @@
                             font-size: 18px;
                         }
                     }
+                }
+            }
+        }
+        .s03{
+            .box{
+                transform: translateY(300%);
+                #box1{
+                    width:85px; height:85px;
+                }
+                #box2{
+                    width:85px; height:85px;
+
                 }
             }
         }
@@ -218,7 +236,7 @@
                     
                 }
                 figure{
-                    top:25%;
+                    padding-top: 30%;
                     figcaption{
                         p{font-size: 20px;}
                         h2{font-size: 30px;}
@@ -257,8 +275,8 @@
             margin-top: 150px;
             padding-top: 20px;
             padding-bottom: 50px;
-            position: relative;
             
+            display: block;
             .box{
                 margin:0 3%;
                 transform: translateY(300px);
@@ -266,59 +284,52 @@
                 #box2{width: 70px; height: 70px;}
             }
             .main03{
+                display: block;
+                padding: 0;
+                margin-top: 0px;
+                margin-bottom: 100px;
                 .m_text{
+                    padding: 0;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    
                     p:nth-of-type(1){
                         
                         span:nth-of-type(1) {
                             font-size: 40px;
-                            position: absolute;
-                            left:99%;
-                            transform: translate(-50%);
-                            top:13%;
+                            width: auto;
+                            
                         }
                         span:nth-of-type(2) {
                             font-size: 45px;
-                            position: absolute;
-                            left:50%;
-                            transform: translate(-50%);
-                            top:19%;
+                           
                         }
                         
                     }
                     p:nth-of-type(2){
                         z-index: 5;
                         font-size: 16px;
-                        position: absolute;
-                        left:-10%;
-                        top:35%;
                         text-align: center;
+                        padding: 15px;
                     }
                     ul{
                         z-index: 5;
                         font-size: 14px;
-                        position: absolute;
-                        left:44%;
-                        top:60%;
+                        display: none;
                         text-align: center;
                     }
                 }
-                .slide3{
+                .mySwiper{
                            
-                    
-                    p:nth-of-type(1){
-                        position: absolute;
-                        left:50%;
-                        top:28%;
-                        transform:translateX(-50%);
-                        width:65%;
-                    }
-                    p:nth-of-type(2){display: none;}
-                    p:nth-of-type(3){display:none;}
-
+                    margin: 0 auto;
                 }
             }
             .wave3{
-                top:99%;
+                top:85%;
             }
         }
         .s06{
@@ -414,8 +425,6 @@
 }
 
 @media (width <= 480px) {
-    header{}
-    
     main{
         .s01{
             .bg{
@@ -429,10 +438,8 @@
                     >img{width: 19vw;}
                 }
                 >figure{
-                    
-                    
+                    padding-top: 55%;
                     >figcaption{
-                        transform: translateY(-210%);
                         width: 250px;
                         >p{font-size: 14px;}
                         >h2{font-size: 20px;}

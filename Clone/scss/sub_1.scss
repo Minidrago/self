@@ -72,10 +72,6 @@ header {
             }
         }
 
-
-
-
-
         div {
             >p {
                 display: flex;
@@ -110,8 +106,52 @@ header {
         height: 260px;
         display: none;
     }
+    .burgerBox{
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        right: 0;
+        top: 0;
+        background-color: black;
+        opacity: 0.8;
+        font-size: 50px;
+        display: none;
+        div{
+            span{
+            display: block;
+            border: 1px solid white;
+            width: 60px;
+            height: 3px;
+            margin: 20px;
+            background-color: white;
+            
+            }
+            span:nth-of-type(1){
+                transform: translateY(11px) rotate(45deg);
+                
+            }
+            span:nth-of-type(2){
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            a{
+                padding: 3%;
+                opacity: 1;
+                li{
+                
+            }
+        }
+        }
+        // display: none;
 
-   
+    }
+
 }
 
 header.active {
